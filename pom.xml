@@ -11,13 +11,6 @@
 	<name>toy-robot-simulator</name>
 	<description>Exploration of a popular coding puzzle</description>
 
-	<properties>
-		<!-- To supply password for GitHub Pages upload on travis-ci -->
-		<github.global.server>github</github.global.server>
-		<github.global.userName>${env.GITHUB_USERNAME}</github.global.userName>
-		<github.global.password>${env.GITHUB_PASSWORD}</github.global.password>
-	</properties>
-
 	<dependencies>
 
 		<dependency>
@@ -130,28 +123,6 @@
 
 			</plugin>
 
-			<!-- Deploy the web site -->
-			<plugin>
-
-				<groupId>com.github.github</groupId>
-				<artifactId>site-maven-plugin</artifactId>
-				<version>0.12</version>
-				<configuration>
-					<server>github</server>
-					<message>Creating site for ${project.version}</message>
-					<merge>true</merge>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>site</goal>
-						</goals>
-						<phase>site</phase>
-
-					</execution>
-				</executions>
-
-			</plugin>
 
 			<!-- For generating the Maven site and project reports -->
 			<plugin>
